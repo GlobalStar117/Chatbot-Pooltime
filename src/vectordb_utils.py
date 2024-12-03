@@ -105,7 +105,7 @@ def query_pinecone(query: str, top_k = 5):
     )
 
     context_str = format_rag_contexts(xc["matches"])
-    print(context_str)
+    # print(context_str)
     return context_str
 
 # Entry point
