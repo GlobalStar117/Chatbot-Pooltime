@@ -7,3 +7,6 @@ google-api-python-client
 protoc_gen_openapiv2
 grpcio
 streamlit
+llama_index
+fastapi
+uvicorn

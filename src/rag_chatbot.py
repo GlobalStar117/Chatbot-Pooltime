@@ -26,8 +26,10 @@ def create_rag_chain():
     For anyone looking to maintain their pool effectively, Pooltime.se serves as a valuable resource.
 
     Based on the given context below, produce an answer that elaborates on the situation, provides in-depth knowledge.
-    If context includes url, you can return that url as a reference
+    If context includes url, you can return that url with html tag style as a reference, for example like this '<a href="link" target="_blank" style="color: blue;">link</a>'
+    If context includes image url, you can return image url with html image tag stile as a reference, for example like this '<img src="link" alt="$title" width = "200px" height ="200px" />'
     If the question is a context-free question, you do not need to describe anything related to the context.
+    One of the most important thing is  that you have to answer in Swedish
     Context: {context}
 
     Question: {question}""")
