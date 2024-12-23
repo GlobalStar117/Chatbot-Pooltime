@@ -33,8 +33,8 @@ def main():
     try:
         # Import different types of data into vector database
         import_json_to_vector(os.path.join(SOURCE, "pages.json"), "website", metadata_processor=truncate_metadata)
-        # import_json_to_vector(os.path.join(SOURCE, "posts.json"), "website")
-        # import_json_to_vector(os.path.join(SOURCE, "products.json"), "product")
+        import_json_to_vector(os.path.join(SOURCE, "posts.json"), "website")
+        import_json_to_vector(os.path.join(SOURCE, "products.json"), "product")
         print(os.path.join(SOURCE))
         # import_pdfs_to_vector(os.path.join(SOURCE))
         # Print index statistics

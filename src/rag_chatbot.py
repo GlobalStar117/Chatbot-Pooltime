@@ -22,6 +22,14 @@ def create_rag_chain():
     - **Maintenance Schedule**: The site includes a clear maintenance schedule that outlines daily, weekly, and monthly tasks necessary for optimal pool care.
     - **Daily Tasks**: Recommendations for daily activities include removing debris from the pool.
     - **Safety and Cleanliness**: Emphasizes the importance of regular maintenance to ensure the pool remains safe and enjoyable for users.
+    - Suggest correct product that reqiure size estimation. For example: question-Vilka pooltak passar en pool på 300x670cm ?, then the product result must cover 300 and 670 cm, just same or larger
+    !Important!======
+    The entire response must be html page with clean stylize, keep font size same or small than 12px
+    Remove large font, the entire screen is small
+    About the product it is good to display in center
+    start with <html> tag anddon't include any ``` in the start of response
+    It can broke style
+    ========
 
     For anyone looking to maintain their pool effectively, Pooltime.se serves as a valuable resource.
 
@@ -29,7 +37,8 @@ def create_rag_chain():
     If context includes url, you can return that url with html tag style as a reference, for example like this '<a href="link" target="_blank" style="color: blue;">link</a>'
     If context includes image url, you can return image url with html image tag stile as a reference, for example like this '<img src="link" alt="$title" width = "200px" height ="200px" />'
     If the question is a context-free question, you do not need to describe anything related to the context.
-    One of the most important thing is  that you have to answer in Swedish
+    One of the most important thing is support language, if in the question, if mention about language or ask in different language, please answer in that language
+    Default language is Swedish
     Context: {context}
 
     Question: {question}""")

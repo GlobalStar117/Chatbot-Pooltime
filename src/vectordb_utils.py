@@ -158,7 +158,7 @@ def format_rag_contexts(matches: list):
     context_str = "\n---\n".join(contexts)
     return context_str
 
-def query_pinecone(query: str, top_k = 5):
+def query_pinecone(query: str, top_k = 10):
     #query pinecone and return list of records
     xq = embed_model.embed_documents([query])
 
@@ -168,6 +168,7 @@ def query_pinecone(query: str, top_k = 5):
     )
 
     context_str = format_rag_contexts(xc["matches"])
+    print(context_str)
     return context_str
 
 # Entry point
